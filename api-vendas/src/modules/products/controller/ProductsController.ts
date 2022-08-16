@@ -64,4 +64,3 @@ export default class ProductsController {
     return response.json([]);
   }
 }
-

@@ -2,7 +2,7 @@
 import fetch, { Response } from 'node-fetch';
 import { faker } from '@faker-js/faker';
 
-describe('Livros test', () => {
+describe('Product test', () => {
   //GET ALL
   let responseGETALL: Response;
 
@@ -21,10 +21,6 @@ describe('Livros test', () => {
 
   //DELETE
   let respondeDELETE: Response;
-
-  //GET BY ID DELETED
-  let respondeGET_deleteded: Response;
-  let bodyGetDeleted: any;
 
   beforeEach(async () => {
     const url = 'http://localhost:3333/products/';
@@ -93,7 +89,7 @@ describe('Livros test', () => {
   });
 
   describe('INSERT', () => {
-    it('should save livro', () => {
+    it('should save produc', () => {
       expect(responseCREATE.status).toBe(200);
       expect(typeof bodyCreate['price']).toBe('number');
       expect(typeof bodyCreate['quantity']).toBe('number');
